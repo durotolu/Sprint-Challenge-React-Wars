@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import axios from 'axios';
-import Characters from './components/Characters'
+import Characters from './Characters'
 
 const api = 'https://swapi.co/api/people/';
 
@@ -28,6 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <Characters characters={arrayApis} />
     </div>
   );
 }
